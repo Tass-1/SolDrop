@@ -2,7 +2,7 @@ import { SolIcon } from "./Icons/Solana"
 
 export const Footer = () => {
     return (
-        <nav className="w-full bg-[#1c2029] h-20 rounded-md flex items-center px-10">
+        <nav className="w-full bg-[#1c2029] h-20  flex items-center px-10">
             <div className="flex justify-between items-center w-full">
                 
                 

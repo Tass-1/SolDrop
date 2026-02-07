@@ -1,6 +1,10 @@
 import { Card } from "../components/Card"
 import { Air } from "../components/Icons/Air"
 import { Analytics } from "../components/Icons/Analytics"
+import { Comm } from "../components/Icons/Comm"
+import { Fast } from "../components/Icons/Fast"
+import { Lock } from "../components/Icons/Lock"
+import { Open } from "../components/Icons/Open"
 import { SolIcon } from "../components/Icons/Solana"
 
 export const Home = () => {
@@ -35,14 +39,14 @@ export const Home = () => {
             <div className="flex px-10 gap-20 pl-30 mt-5">
                 <Card text={"Effortless Airdrops"} icon={<Air size="w-15 h-15"/>} />
                 <Card text={"Real-time Analytics"} icon={<Analytics size="w-15 h-15"/>} />
-                <Card text={"Secure and Audited"} icon={undefined} />
+                <Card text={"Secure and Audited"} icon={<Lock size="w-15 h-15"/>} />
             </div>
 
             <div className="text-white pl-20 text-3xl font-semibold pt-10 pb-5">Why Soldrop</div>
             <div className="flex px-10 gap-20 pl-30 mt-5 pb-20">
-                <Card text={"Fast"} icon={undefined} />
-                <Card text={"Open-Source"} icon={undefined} />
-                <Card text={"Community-Driven"} icon={undefined} />
+                <Card text={"Fast"} icon={<Fast size="w-15 h-15"/>} />
+                <Card text={"Open-Source"} icon={<Open size="w-15 h-15"/>} />
+                <Card text={"Community-Driven"} icon={<Comm size="w-15 h-15"/>} />
             </div>
         </div>
     )
