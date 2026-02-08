@@ -1,9 +1,5 @@
 
 
-
-
-
-
 export const Comm = ({size = "w-8 h-8"} : {
     size?:string
 }) => {

@@ -6,7 +6,7 @@ export const Header = () => {
             <div className="flex justify-between items-center w-full">
                 
                 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center ">
                     <SolIcon size="w-10 h-10" /> 
                     <div className="flex text-2xl tracking-tight">
                         <span className="font-semibold text-[#e7e9ea]">SOLDROP</span>
@@ -15,8 +15,8 @@ export const Header = () => {
                 </div>
 
                 
-                <div className="flex items-center gap-6">
-                    <a href="#" className="text-[#6779f6] text-lg hover:text-white transition-colors">Doc</a>
+                <div className="flex items-center gap-15 ">
+                    <a href="#" className="text-[#6779f6] text-lg hover:text-white transition-colors">Docs</a>
                     <a href="#" className="text-[#6779f6] text-lg hover:text-white transition-colors">Share</a>
                     <button className="px-5 py-2 bg-[#6779f6] text-white rounded-lg font-bold hover:bg-[#5566d6] transition-all">
                         Launch

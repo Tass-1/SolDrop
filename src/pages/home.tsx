@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Card } from "../components/Card"
 import { Air } from "../components/Icons/Air"
 import { Analytics } from "../components/Icons/Analytics"
@@ -6,10 +7,14 @@ import { Fast } from "../components/Icons/Fast"
 import { Lock } from "../components/Icons/Lock"
 import { Open } from "../components/Icons/Open"
 import { SolIcon } from "../components/Icons/Solana"
+import { Modal } from "../components/airdropModal"
 
 export const Home = () => {
+
+    const [modal , setModal] = useState(false)
     return (
         <div className="bg-[#13151e] min-h-screen ">
+            <Modal open={modal} close={() => {setModal(false)}}/>
             <div className="flex justify-between pl-20 pt-20 pr-20">
                 <div className="flex-1">
                     <div className="text-white text-5xl font-semibold mb-5 tracking-tight">
@@ -21,7 +26,7 @@ export const Home = () => {
                         Built for Power Users
                     </div>
                     <div>
-                        <button className="bg-[#6a7ef5] px-12 py-3 rounded-xl text-xl cursor-pointer hover:bg-[#586ad4] transition-all shadow-lg shadow-blue-500/20"> 
+                        <button onClick={() => {setModal(true)}} className="bg-[#6a7ef5] px-12 py-3 rounded-xl text-xl cursor-pointer hover:bg-[#586ad4] transition-all shadow-lg shadow-blue-500/20"> 
                             Launch App 
                         </button>
                     </div>
@@ -42,7 +47,7 @@ export const Home = () => {
                 <Card text={"Secure and Audited"} icon={<Lock size="w-15 h-15"/>} />
             </div>
 
-            <div className="text-white pl-20 text-3xl font-semibold pt-10 pb-5">Why Soldrop</div>
+            <div className="text-white pl-20 text-3xl font-semibold pt-10 pb-5">Why Soldrop?</div>
             <div className="flex px-10 gap-20 pl-30 mt-5 pb-20">
                 <Card text={"Fast"} icon={<Fast size="w-15 h-15"/>} />
                 <Card text={"Open-Source"} icon={<Open size="w-15 h-15"/>} />

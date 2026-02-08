@@ -12,6 +12,10 @@ export const Footer = () => {
                         <span className="font-semibold text-[#e7e9ea]">SOLDROP</span>
                         <span className="font-normal text-[#e7e9ea]/70 ml-1">Sentinel</span>
                     </div>
+                    <div className="ml-15 flex items-center text-xl">
+                        <span className="text-[#e7e9ea]/70">Privacy</span>
+                        <span className="text-[#e7e9ea]/70 ml-15">Terms</span>
+                    </div>
                 </div>
 
                 
