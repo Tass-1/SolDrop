@@ -2,6 +2,7 @@ import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react
 import { WalletDisconnectButton, WalletModalProvider, WalletMultiButton } from '@solana/wallet-adapter-react-ui'
 import '@solana/wallet-adapter-react-ui/styles.css';
 import { Airdrop } from './Airdrop';
+import { Close } from './Icons/Close';
 
 
 
@@ -21,10 +22,12 @@ export function Modal({open , close} : {
       <ConnectionProvider endpoint='https://api.devnet.solana.com' >
         <WalletProvider  wallets={[]}>
           <WalletModalProvider>
-              <button className='bg-red-200' onClick={close}>Click me </button>
-
-              <div>
-                  <WalletDisconnectButton></WalletDisconnectButton>
+            <div className='relative left-139  w-10 rounded-xl '>
+              <Close size='h-10 w-10'/>
+            </div>
+              
+              <div className='bg-red-200 gap-6 justify-center'>
+                  <WalletDisconnectButton style={{ backgroundColor:"red"}}></WalletDisconnectButton>
                   <WalletMultiButton></WalletMultiButton>
               </div>
               
