@@ -15,8 +15,8 @@ export const Airdrop = () => {
     }
     return (
         <div>
-            <input className='bg-red-100 ' type="text" placeholder="Amount" ref={amount}/>
-            <button className = 'bg-blue-200 cursor-pointer' onClick={submit}> Airdrop</button>
+            <input className='bg-red-100 p-4 m-4 ml-30 mt-30 rounded-xl w-60 ' type="text" placeholder="Amount" ref={amount}/>
+            <button className = 'bg-blue-200 cursor-pointer rounded-md p-3 w-35' onClick={submit}> Airdrop</button>
         </div>
     )
 }
