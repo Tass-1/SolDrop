@@ -17,21 +17,29 @@ export function Modal({open , close} : {
     <>
     {open && (<div className='w-screen h-screen flex items-center fixed inset-0 justify-center bg-[#13171e]/60 backdrop-blur-md z-50'>
         
-<div className='bg-[#1c202a] h-100 w-150 rounded-xl'>
+<div className='bg-[#000100] h-130 w-150 rounded-xl'>
       
       <ConnectionProvider endpoint='https://api.devnet.solana.com' >
         <WalletProvider  wallets={[]}>
           <WalletModalProvider>
-            <div className='relative left-139  w-10 rounded-xl '>
-              <Close size='h-10 w-10'/>
-            </div>
               
-              <div className='bg-red-200 gap-6 justify-center'>
-                  <WalletDisconnectButton style={{ backgroundColor:"red"}}></WalletDisconnectButton>
-                  <WalletMultiButton></WalletMultiButton>
+              
+
+            
+              <div className='bg-[#0a0d10] m-2 rounded-xl pb-10 h-126'>
+                  <div className='relative left-135 w-10 rounded-xl cursor-pointer' onClick={close}>
+                    <Close size='h-10 w-10'/>
+                  </div>
+
+                  <div className='  rounded-xl gap-2 flex justify-center pt-2  '>
+                    <WalletDisconnectButton style={{ backgroundColor:"#d0f191", borderRadius:"20px", width:"280px", textAlign:"center", height:"100px", justifyContent:"center", color:"black"}}></WalletDisconnectButton>
+                    <WalletMultiButton style={{ borderRadius:"20px", width:"280px", textAlign:"center", justifyContent:"center", height:"100px"}}></WalletMultiButton>
+                  </div>
+
+                  <Airdrop></Airdrop>
               </div>
               
-              <Airdrop></Airdrop>
+              
           </WalletModalProvider>
         </WalletProvider>
       </ConnectionProvider>
